@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | Expressive Design</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f5f3ee",
+                        "on-surface": "#1b1c19",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-bright": "#fbf9f4",
+                        "inverse-on-surface": "#f2f1ec",
+                        "secondary-fixed": "#ebe1d2",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#f0eee9",
+                        "outline": "#76786e",
+                        "surface-container-highest": "#e4e2dd",
+                        "tertiary-fixed-dim": "#c2caac",
+                        "background": "#fbf9f4",
+                        "inverse-primary": "#c6c6c6",
+                        "on-primary-container": "#dbdbda",
+                        "tertiary-container": "#5b634a",
+                        "on-tertiary-fixed": "#171e0a",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#686256",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#cec5b7",
+                        "surface-container-high": "#eae8e3",
+                        "secondary": "#645e52",
+                        "primary": "#474948",
+                        "tertiary-fixed": "#dee6c7",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#5d5f5e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#4c463b",
+                        "on-tertiary-fixed-variant": "#424a32",
+                        "on-primary-fixed-variant": "#454747",
+                        "inverse-surface": "#30312e",
+                        "on-surface-variant": "#46483f",
+                        "surface-dim": "#dbdad5",
+                        "tertiary": "#434b34",
+                        "on-tertiary-container": "#d6dfbf",
+                        "surface": "#fbf9f4",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#5f6060",
+                        "surface-variant": "#e4e2dd",
+                        "primary-fixed": "#e2e2e2",
+                        "on-secondary-fixed": "#1f1b12",
+                        "on-primary-fixed": "#1a1c1c",
+                        "on-background": "#1b1c19",
+                        "outline-variant": "#c7c7bc",
+                        "secondary-container": "#e8dfcf"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .notoSerif { font-family: 'Noto Serif', serif; }
+        .manrope { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface manrope selection:bg-tertiary-fixed-dim selection:text-on-tertiary-fixed">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-[#fbf9f4]/80 dark:bg-[#1b1c19]/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(27,28,25,0.05)] flex justify-between items-center px-12 py-6 max-w-full">
+<div class="font-['Noto_Serif'] text-2xl tracking-tighter font-bold text-[#1b1c19] dark:text-[#fbf9f4]">Expressive Design</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-[#645e52] dark:text-[#c7c7bc] hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300 font-['Noto_Serif'] text-lg tracking-tight" href="index.html">Home</a>
+<a class="text-[#645e52] dark:text-[#c7c7bc] hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300 font-['Noto_Serif'] text-lg tracking-tight" href="about.html">About Us</a>
+<a class="text-[#474948] dark:text-[#fbf9f4] border-b border-[#645e52] pb-1 hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300 font-['Noto_Serif'] text-lg tracking-tight" href="contact.html">Contact Us</a>
+<a class="text-[#645e52] dark:text-[#c7c7bc] hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300 font-['Noto_Serif'] text-lg tracking-tight" href="testimonials.html">Testimonials</a>
+</nav>
+
+</div>
+
+        <button id="menuBtn" class="md:hidden p-2" aria-label="Open navigation menu">
+  <span class="material-symbols-outlined text-[#474948]">menu</span>
+</button>
+
+<div id="mobileMenu" class="hidden fixed top-[88px] left-0 w-full bg-[#fbf9f4] z-[9999] flex flex-col items-center gap-3 py-6 font-['Noto_Serif'] text-xl shadow-lg">
+
+  <button id="closeBtn" class="self-start ml-6 text-3xl text-[#474948]">
+    ✕
+  </button>
+
+  <a href="index.html" class="text-[#1b1c19]">Home</a>
+  <a href="about.html" class="text-[#1b1c19]">About Us</a>
+ 
+  <a href="testimonials.html" class="text-[#1b1c19]">Testimonials</a>
+
+
+</header>
+<main class="pt-32 pb-20">
+<!-- Hero Section -->
+<section class="px-8 md:px-16 mb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-7">
+<h1 class="text-5xl md:text-7xl lg:text-8xl notoSerif font-normal tracking-tighter leading-none mb-8">Let's create something <span class="italic">meaningful</span> together.</h1>
+<p class="text-lg md:text-xl font-light text-on-surface-variant max-w-xl leading-relaxed">
+                    Our company is dedicated to intentional spaces that reflect the soul of those who inhabit them. Reach out to discuss your project and create your dream home.
+                </p>
+</div>
+<div class="lg:col-span-5 aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden">
+<img alt="Interior design studio" class="w-full h-full object-cover" data-alt="Sunlit minimalist interior design studio with oak furniture, architectural blueprints, and large industrial windows overlooking a foggy harbor." src="Interior Design Services  Expressive Design  Duluth & Hermantown, MN, Hayward & Solon Springs, WI.png"/>
+</div>
+</section>
+<!-- Contact Grid -->
+<section class="px-8 md:px-16 grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Information Column -->
+<div class="lg:col-span-5 space-y-16">
+<div>
+<h3 class="font-sans text-xs tracking-widest uppercase text-secondary mb-6"></h3>
+
+</div>
+<div>
+<h3 class="font-sans text-xs tracking-widest uppercase text-secondary mb-6">Direct Inquiries</h3>
+<div class="space-y-4">
+<a class="inline-flex items-center gap-4 py-4 px-8 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-lg shadow-sm hover:opacity-90 transition-all scale-100 active:scale-95" href="tel:+12183488375">
+<span class="material-symbols-outlined text-xl">call</span>
+<span class="font-sans tracking-widest uppercase text-xs font-bold">+1-218-348-8375</span>
+</a>
+<p class="text-sm text-on-surface-variant pl-2">Available Mon — Fri, 10am — 5pm CST By Appointment</p>
+</div>
+</div>
+
+</div>
+<!-- Form Column -->
+<div class="lg:col-span-7 bg-surface-container-low p-8 md:p-12 lg:p-16 rounded-lg">
+<h2 class="notoSerif text-3xl mb-12">Send a Message or Schedule an Appointment</h2>
+<form class="space-y-10" action="https://formspree.io/f/mdaykbpl" method="POST">
+
+    <!-- Name -->
+    <div class="relative">
+        <label class="block text-xs uppercase tracking-widest text-on-surface-variant mb-2">
+            Full Name
+        </label>
+        <input 
+            name="name"
+            type="text"
+            placeholder="Elias Thorne"
+            class="w-full bg-transparent border-b border-outline-variant/30 py-3"
+            required
+        />
+    </div>
+
+    <!-- Email -->
+    <div class="relative">
+        <label class="block text-xs uppercase tracking-widest text-on-surface-variant mb-2">
+            Email Address
+        </label>
+        <input 
+            name="email"
+            type="email"
+            placeholder="you@email.com"
+            class="w-full bg-transparent border-b border-outline-variant/30 py-3"
+            required
+        />
+    </div>
+    <!-- Phone -->
+    <div class="relative">
+        <label class="block text-xs uppercase tracking-widest text-on-surface-variant mb-2">
+            Phone Number
+        </label>
+        <input 
+            name="phone"
+            type="tel"
+            placeholder="123-456-7890"
+            class="w-full bg-transparent border-b border-outline-variant/30 py-3"
+            required
+        />
+    </div>
+
+
+    <!-- Message -->
+    <div class="relative">
+        <label class="block text-xs uppercase tracking-widest text-on-surface-variant mb-2">
+            Your Vision
+        </label>
+        <textarea 
+            name="message"
+            rows="4"
+            placeholder="Tell us about your project..."
+            class="w-full bg-transparent border-b border-outline-variant/30 py-3"
+            required
+        ></textarea>
+    </div>
+
+    <!-- Submit -->
+    <div class="pt-6">
+        <button type="submit" class="text-primary">
+            Submit Inquiry
+        </button>
+    </div>
+
+</form>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-20 bg-[#f5f3ee] dark:bg-[#121211] flex flex-col items-center gap-8 px-8 w-full">
+<div class="space-y-4 text-center">
+<div class="font-['Noto_Serif'] text-xl text-[#1b1c19] dark:text-[#fbf9f4]">Expressive Design</div>
+<p class="text-[#474948] dark:text-[#c7c7bc] font-['Manrope'] text-sm tracking-widest uppercase">© 2026 Expressive Design. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-[#645e52] dark:text-[#c7c7bc] font-['Manrope'] text-sm tracking-widest uppercase hover:underline decoration-[#645e52] underline-offset-8 opacity-80 hover:opacity-100 transition-opacity" href="index.html">Home</a>
+<a class="text-[#645e52] dark:text-[#c7c7bc] font-['Manrope'] text-sm tracking-widest uppercase hover:underline decoration-[#645e52] underline-offset-8 opacity-80 hover:opacity-100 transition-opacity" href="about.html">About Us</a>
+<a class="font-bold text-[#1b1c19] dark:text-[#fbf9f4] font-['Manrope'] text-sm tracking-widest uppercase hover:underline decoration-[#645e52] underline-offset-8 opacity-80 hover:opacity-100 transition-opacity" href="contact.html">Contact Us</a>
+<a class="text-[#645e52] dark:text-[#c7c7bc] font-['Manrope'] text-sm tracking-widest uppercase hover:underline decoration-[#645e52] underline-offset-8 opacity-80 hover:opacity-100 transition-opacity" href="testimonials.html">Testimonials</a>
+</div>
+</footer>
+        <script>
+const menuBtn = document.getElementById("menuBtn");
+const closeBtn = document.getElementById("closeBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+
+closeBtn.addEventListener("click", () => {
+  mobileMenu.classList.add("hidden");
+});
+</script>
+</body></html>

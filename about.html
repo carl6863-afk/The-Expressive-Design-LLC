@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f5f3ee",
+                    "on-surface": "#1b1c19",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "surface-bright": "#fbf9f4",
+                    "inverse-on-surface": "#f2f1ec",
+                    "secondary-fixed": "#ebe1d2",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#f0eee9",
+                    "outline": "#76786e",
+                    "surface-container-highest": "#e4e2dd",
+                    "tertiary-fixed-dim": "#c2caac",
+                    "background": "#fbf9f4",
+                    "inverse-primary": "#c6c6c6",
+                    "on-primary-container": "#dbdbda",
+                    "tertiary-container": "#5b634a",
+                    "on-tertiary-fixed": "#171e0a",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#686256",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#cec5b7",
+                    "surface-container-high": "#eae8e3",
+                    "secondary": "#645e52",
+                    "primary": "#474948",
+                    "tertiary-fixed": "#dee6c7",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#5d5f5e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#4c463b",
+                    "on-tertiary-fixed-variant": "#424a32",
+                    "on-primary-fixed-variant": "#454747",
+                    "inverse-surface": "#30312e",
+                    "on-surface-variant": "#46483f",
+                    "surface-dim": "#dbdad5",
+                    "tertiary": "#434b34",
+                    "on-tertiary-container": "#d6dfbf",
+                    "surface": "#fbf9f4",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#5f6060",
+                    "surface-variant": "#e4e2dd",
+                    "primary-fixed": "#e2e2e2",
+                    "on-secondary-fixed": "#1f1b12",
+                    "on-primary-fixed": "#1a1c1c",
+                    "on-background": "#1b1c19",
+                    "outline-variant": "#c7c7bc",
+                    "secondary-container": "#e8dfcf"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .notoSerif { font-family: 'Noto Serif', serif; }
+        .manrope { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+
+    
+
+
+</head>
+<body class="bg-surface text-on-surface manrope selection:bg-tertiary-fixed selection:text-on-tertiary-fixed-variant">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f4]/80 dark:bg-[#1b1c19]/80 backdrop-blur-xl flex justify-between items-center px-12 py-6 max-w-full shadow-[0_20px_40px_rgba(27,28,25,0.05)]">
+<div class="font-['Noto_Serif'] text-2xl tracking-tighter font-bold text-[#1b1c19] dark:text-[#fbf9f4]">Expressive Design</div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="text-[#645e52] dark:text-[#c7c7bc] hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300 font-['Manrope'] text-sm tracking-widest uppercase" href="index.html">Home</a>
+<a class="text-[#474948] dark:text-[#fbf9f4] border-b border-[#645e52] pb-1 hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300 font-['Manrope'] text-sm tracking-widest uppercase" href="about.html">About Us</a>
+<a class="text-[#645e52] dark:text-[#c7c7bc] hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300 font-['Manrope'] text-sm tracking-widest uppercase" href="contact.html">Contact Us</a>
+<a class="text-[#645e52] dark:text-[#c7c7bc] hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300 font-['Manrope'] text-sm tracking-widest uppercase" href="testimonials.html">Testimonials</a>
+<a class="bg-primary text-on-primary px-6 py-2 text-xs tracking-widest uppercase hover:opacity-90 transition-opacity scale-100 active:scale-95 transition-transform" href="contact.html">Contact</a>
+</div>
+
+<button id="menuBtn" class="md:hidden p-2 active:scale-95 transition-transform duration-200" aria-label="Open navigation menu">
+  <span class="material-symbols-outlined text-[#474948] dark:text-[#fbf9f4]">menu</span>
+</button>
+      <div id="mobileMenu" class="hidden fixed top-[88px] left-0 w-full bg-[#fbf9f4] z-[9999] flex flex-col items-center gap-3 py-6 font-['Noto_Serif'] text-xl shadow-lg">
+
+  <button id="closeBtn" class="self-start ml-6 text-3xl text-[#474948]">
+    ✕
+  </button>
+
+  <a href="index.html" class="text-[#1b1c19]">Home</a>
+ 
+  <a href="contact.html" class="text-[#1b1c19]">Contact Us</a>
+  <a href="testimonials.html" class="text-[#1b1c19]">Testimonials</a>
+
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 md:px-16 max-w-7xl mx-auto">
+<!-- Hero Section: Narrative -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end mb-24">
+<div class="md:col-span-7">
+<span class="label-md text-tertiary uppercase tracking-[0.3em] font-semibold text-xs mb-6 block">The Studio</span>
+<h1 class="text-5xl md:text-7xl notoSerif text-primary tracking-tighter leading-tight mb-8">
+                    Crafting spaces that <br/> <span class="italic text-secondary">breathe</span> with you.
+                </h1>
+
+<div class="space-y-6">
+
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-xl manrope font-light">
+    What can you expect from our interior designer? Our home design services include:
+</p>
+
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-xl manrope font-light">
+    • Personalized design plans – we'll use vision boards, color analysis and curated textiles to personalize your space.
+</p>
+
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-xl manrope font-light">
+    • Lighting and window treatments – we'll improve your home's ambiance with thoughtful selections.
+</p>
+
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-xl manrope font-light">
+    • Furniture and fixture selection – we'll guide you to place high-quality furnishings, fixtures and finishes to tranform your space.
+</p>
+
+
+</div>
+</div>
+<div class="md:col-span-5 flex justify-end">
+<div class="relative w-full aspect-[7/6] bg-surface-container-low rounded-lg overflow-hidden group">
+<img alt="Interior Design Studio" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist interior design studio with oak wood tables, natural linen fabrics, and large windows with soft morning light hitting a ceramic vase." src="Interior Design.png"/>
+<div class="absolute inset-0 bg-primary/5"></div>
+</div>
+</div>
+</section>
+<!-- Values Section: The Core Three -->
+<section class="bg-surface-container-low -mx-8 md:-mx-16 px-8 md:px-16 py-24">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-4">
+<h2 class="text-3xl notoSerif text-primary">WHAT WE STRIVE FOR</h2>
+<div class="h-[1px] flex-grow bg-outline-variant/30 hidden md:block mx-8"></div>
+<p class="text-xs tracking-[0.2em] uppercase text-secondary font-bold">The Expressive Way</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
+<!-- Value 1 -->
+<div class="space-y-6">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">mindfulness</span>
+</div>
+<h3 class="text-xl notoSerif text-primary italic">Intentionality</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed manrope">
+                            We will listen and absorb what's important to you, and bring that to life creating a space that suits all your needs and desires.
+                        </p>
+</div>
+<!-- Value 2 -->
+<div class="space-y-6">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">draw</span>
+</div>
+<h3 class="text-xl notoSerif text-primary italic">Craftsmanship</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed manrope">
+                            We only align ourselves with companies that guarantee the highest quality of craftsmanship and finishing.
+                        </p>
+</div>
+<!-- Value 3 -->
+<div class="space-y-6">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">hub</span>
+</div>
+<h3 class="text-xl notoSerif text-primary italic">Connection</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed manrope">
+                            Design is a dialogue. We foster a deep connection between our client and their home, ensuring every project is a true reflection of you and you only.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 text-center">
+<div class="max-w-2xl mx-auto space-y-10">
+<h2 class="text-4xl notoSerif text-primary leading-snug">Let’s define your haven together.</h2>
+<div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+<a class="bg-primary text-on-primary px-10 py-4 text-sm tracking-widest uppercase hover:opacity-95 transition-all shadow-lg shadow-primary/10" href="contact.html">Inquire Now</a>
+
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 bg-[#f5f3ee] flex flex-col md:flex-row justify-between items-start md:items-center px-8 md:px-16 gap-8">
+<div class="space-y-4">
+<div class="font-serif italic text-lg text-[#474948]">Expressive Design</div>
+<p class="text-[#474948]/50 text-[10px] tracking-widest uppercase font-sans manrope">© 2026 Expressive Design. Designed with Intentional Asymmetry.</p>
+</div>
+<div class="flex flex-wrap gap-8">
+<a class="text-[#474948]/50 font-sans manrope text-xs tracking-widest uppercase hover:text-[#474948] transition-opacity" href="index.html">Home</a>    
+<a class="text-[#474948]/50 font-sans manrope text-xs tracking-widest uppercase hover:text-[#474948] transition-opacity" href="about.html">About Us</a>
+<a class="text-[#474948]/50 font-sans manrope text-xs tracking-widest uppercase hover:text-[#474948] transition-opacity" href="testimonials.html">Testimonials</a>
+<a class="text-[#474948]/50 font-sans manrope text-xs tracking-widest uppercase hover:text-[#474948] transition-opacity" href="contact.html">Contact</a>
+
+
+</div>
+<div class="flex gap-4">
+<a class="w-8 h-8 flex items-center justify-center border border-outline-variant/30 rounded-full text-secondary hover:text-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">nest_eco_leaf</span>
+</a>
+<a class="w-8 h-8 flex items-center justify-center border border-outline-variant/30 rounded-full text-secondary hover:text-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">camera_outdoor</span>
+</a>
+</div>
+</footer>
+      <script>
+const menuBtn = document.getElementById("menuBtn");
+const closeBtn = document.getElementById("closeBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+
+closeBtn.addEventListener("click", () => {
+  mobileMenu.classList.add("hidden");
+});
+</script>
+
+
+</body></html>

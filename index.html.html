@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Expressive Design | Boutique Interior Design</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#76786e",
+                    "surface-container-low": "#f5f3ee",
+                    "on-tertiary-fixed-variant": "#424a32",
+                    "inverse-primary": "#c6c6c6",
+                    "inverse-surface": "#30312e",
+                    "surface-variant": "#e4e2dd",
+                    "on-tertiary-container": "#d6dfbf",
+                    "on-surface-variant": "#46483f",
+                    "surface-dim": "#dbdad5",
+                    "error": "#ba1a1a",
+                    "secondary": "#645e52",
+                    "on-secondary-container": "#686256",
+                    "on-primary-fixed": "#1a1c1c",
+                    "outline-variant": "#c7c7bc",
+                    "surface-container": "#f0eee9",
+                    "secondary-fixed": "#ebe1d2",
+                    "secondary-fixed-dim": "#cec5b7",
+                    "on-primary": "#ffffff",
+                    "surface": "#fbf9f4",
+                    "tertiary-container": "#5b634a",
+                    "surface-container-high": "#eae8e3",
+                    "on-tertiary-fixed": "#171e0a",
+                    "on-secondary-fixed-variant": "#4c463b",
+                    "surface-tint": "#5d5f5e",
+                    "surface-container-highest": "#e4e2dd",
+                    "on-surface": "#1b1c19",
+                    "secondary-container": "#e8dfcf",
+                    "on-background": "#1b1c19",
+                    "inverse-on-surface": "#f2f1ec",
+                    "surface-bright": "#fbf9f4",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "primary-container": "#5f6060",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c2caac",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#454747",
+                    "on-secondary-fixed": "#1f1b12",
+                    "tertiary": "#434b34",
+                    "primary-fixed": "#e2e2e2",
+                    "tertiary-fixed": "#dee6c7",
+                    "primary": "#474948",
+                    "on-primary-container": "#dbdbda",
+                    "background": "#fbf9f4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #fbf9f4; color: #1b1c19; }
+        .serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    html { scroll-behavior: smooth; }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  html { scroll-behavior: smooth; }</style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-[#fbf9f4]/80 dark:bg-[#1b1c19]/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-[0_20px_40px_rgba(27,28,25,0.05)]">
+<div class="flex justify-between items-center px-12 py-6 max-w-full mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#474948] dark:text-[#fbf9f4]" data-icon="menu"></span>
+<h1 class="font-['Noto_Serif'] text-2xl tracking-tighter font-bold text-[#1b1c19] dark:text-[#fbf9f4]">EXPRESSIVE DESIGN</h1>
+</div>
+<nav class="hidden md:flex gap-8 items-center font-['Noto_Serif'] text-lg tracking-tight">
+<a class="text-[#474948] dark:text-[#fbf9f4] border-b border-[#645e52] pb-1 hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300" href="index.html">Home</a>
+<a class="text-[#645e52] dark:text-[#c7c7bc] hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300" href="about.html">About Us</a>
+<a class="text-[#645e52] dark:text-[#c7c7bc] hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300" href="contact.html">Contact Us</a>
+<a class="text-[#645e52] dark:text-[#c7c7bc] hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300" href="testimonials.html">Testimonials</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg text-sm tracking-widest font-medium hover:opacity-90 transition-opacity scale-95 transition-transform duration-200">Contact</button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Sun-drenched minimalist living room" class="w-full h-full object-cover" data-alt="A high-end airy interior with light oak floors, linen sofa, natural stone coffee table, and large windows with soft morning light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWN2TBDO3wXIHrsBIutNYS0WLrlABdS8XjLB8_asg7ADwzgItyKyJJa9Sczw02VJJzn8Davu0FlYtmFXcUVxwefE8XRbzIXbVlDM0BsZUqS8jKjzT8SKfc0aMMnmrD5ZslhCtIWbg0jMoG5mqbmRzJFEO3Tsncp1gT93bfKlvpVNukDwmJeueoWzoNGEqBe_EVDXZwobqcJG6Hkf0gluy4jJColMB0wpR_zra2o-M8M4LrPWT56eP3u-gvwUIwcoHAkDasfHrwGmQ"/>
+<div class="absolute inset-0 bg-on-surface/10"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+<h2 class="serif text-4xl md:text-6xl lg:text-7xl mb-6 tracking-tight leading-tight text-white drop-shadow-sm">
+                Expressive Design — Curating Intentional Spaces in Northern Minnesota and Wisconsin.
+            </h2>
+<p class="font-body text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10 font-light leading-relaxed">A boutique interior design company specializing in residential and commercial spaces that breathe beauty!</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<a class="bg-surface-container-lowest text-primary px-10 py-4 rounded-lg font-medium tracking-widest hover:bg-surface-container transition-colors shadow-lg shadow-black/5 inline-block" href="#selected-works">Explore Our Work</a>
+</div>
+</div>
+</section>
+<!-- Introduction Section -->
+<section class="py-24 px-8 md:px-16 bg-surface-container-low">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-6 -left-6 w-32 h-32 bg-tertiary/10 rounded-full blur-3xl"></div>></div>
+<img alt="Expressive Design - Interior Designer" class="w-full h-[600px] object-cover rounded-xl shadow-2xl grayscale hover:grayscale-0 transition duration-700" data-alt="A professional portrait of a female designer in a minimalist studio setting with architectural plans and textile samples." src="Ashley.jpg"/>
+</div>
+<div class="space-y-8">
+<span class="font-label text-xs tracking-[0.3em] uppercase text-secondary">The Studio</span>
+<h3 class="serif text-4xl md:text-5xl leading-tight">Founded by Ashley Carlson, we believe in the philosophy of <span class="italic text-tertiary">Slow Design</span>.</h3>
+<p class="font-body text-body-lg text-on-surface-variant leading-relaxed">
+                    Personalized service is at the heart of our craft. We reject the fast-paced, disposable trends of modern decor in favor of timeless textures and architectural integrity. Whether in the urban lofts of Duluth or the lakeside retreats of Hayward, our mission is to create havens that reflect the unique rhythm of your life.
+                </p>
+
+</div>
+</div>
+</section>
+<!-- Core Services -->
+<section class="py-32 px-8 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<span class="font-label text-xs tracking-[0.3em] uppercase text-secondary">Capabilities</span>
+<h3 class="serif text-4xl mt-2">Tailored Design Solutions</h3>
+</div>
+<p class="max-w-md font-body text-on-surface-variant italic">From concept to final installation, we provide a seamless journey toward your sanctuary.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1px bg-outline-variant/20 rounded-xl overflow-hidden border border-outline-variant/10">
+<div class="bg-surface-container-lowest p-12 flex flex-col items-center text-center hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-6 scale-100 group-hover:scale-110 transition-transform" data-icon="architecture">architecture</span>
+<h4 class="serif text-2xl mb-4">Full-Service Design</h4>
+<p class="font-body text-on-surface-variant">Comprehensive management for new builds and extensive renovations.</p>
+</div>
+<div class="bg-surface-container-lowest p-12 flex flex-col items-center text-center hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-6 scale-100 group-hover:scale-110 transition-transform" data-icon="palette">palette</span>
+<h4 class="serif text-2xl mb-4">Color Consultation</h4>
+<p class="font-body text-on-surface-variant">Expert guidance on palettes that evoke specific moods and harness natural light.</p>
+</div>
+<div class="bg-surface-container-lowest p-12 flex flex-col items-center text-center hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-6 scale-100 group-hover:scale-110 transition-transform" data-icon="kitchen">kitchen</span>
+<h4 class="serif text-2xl mb-4">Kitchen &amp; Bath Design</h4>
+<p class="font-body text-on-surface-variant">Precision planning for the most functional and evocative spaces in the home.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Teaser (Asymmetric Bento) -->
+<section class="py-24 bg-surface-container-low" id="selected-works">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16 text-center">
+<h3 class="serif text-4xl md:text-5xl">Selected Works</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-auto md:h-[900px]">
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl">
+<img alt="The Duluth Loft" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" data-alt="Industrial chic loft apartment in Duluth with exposed brick, tall windows, and bespoke modern furniture in muted earth tones." src="Rust.jpg"/>
+<div class="absolute bottom-8 left-8 bg-surface-container-lowest/80 backdrop-blur-md p-6 max-w-xs rounded-lg shadow-xl">
+<h4 class="serif text-xl">Lake Nebagamon Loft</h4>
+<p class="font-body text-sm text-secondary uppercase tracking-widest mt-1"> </p>
+</div>
+</div>
+<div class="md:col-span-4 grid grid-rows-2 gap-8">
+<div class="group relative overflow-hidden rounded-xl">
+<img alt="The Hayward Lakehouse" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" data-alt="Modern cabin interior with cedar wood walls, large glass windows looking out to a lake, and cozy minimalist decor." src="View.jpg"/>
+<div class="absolute bottom-6 left-6 bg-surface-container-lowest/80 backdrop-blur-md p-4 rounded-lg">
+<h4 class="serif text-lg">Lake Nebagamon Town Home</h4>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl">
+<img alt="Superior Studio" class="w-full h-full object-cover transition duration-1000 group-hover:scale-105" data-alt="A boutique office interior with soft green walls, custom wood shelving, and elegant Task lighting." src="Yup.jpg"/>
+<div class="absolute bottom-6 left-6 bg-surface-container-lowest/80 backdrop-blur-md p-4 rounded-lg">
+<h4 class="serif text-lg">Pike Lake Studio</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Process -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col items-center mb-20">
+<span class="font-label text-xs tracking-[0.3em] uppercase text-secondary mb-4">Methodology</span>
+<h3 class="serif text-4xl md:text-5xl text-center">The Path to Perfection</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
+<!-- Decorative Connector -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-outline-variant/30 -z-10"></div>
+<div class="text-center group">
+<div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mx-auto mb-8 border border-outline-variant/20 group-hover:bg-tertiary group-hover:text-white transition-all duration-500">
+<span class="serif text-2xl">01</span>
+</div>
+<h4 class="serif text-2xl mb-4 uppercase tracking-widest">Consult</h4>
+<p class="font-body text-on-surface-variant">An immersive dialogue to understand your lifestyle, needs, and the soul of the space.</p>
+</div>
+<div class="text-center group">
+<div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mx-auto mb-8 border border-outline-variant/20 group-hover:bg-tertiary group-hover:text-white transition-all duration-500">
+<span class="serif text-2xl">02</span>
+</div>
+<h4 class="serif text-2xl mb-4 uppercase tracking-widest">Curate</h4>
+<p class="font-body text-on-surface-variant">Selection of materials, bespoke furniture, and art that harmonize to create a cohesive narrative.</p>
+</div>
+<div class="text-center group">
+<div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mx-auto mb-8 border border-outline-variant/20 group-hover:bg-tertiary group-hover:text-white transition-all duration-500">
+<span class="serif text-2xl">03</span>
+</div>
+<h4 class="serif text-2xl mb-4 uppercase tracking-widest">Create</h4>
+<p class="font-body text-on-surface-variant">The final transformation—expert installation where vision and reality perfectly align.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials/CTA -->
+<section class="py-32 px-8 bg-[#5B634A] text-white">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-5xl opacity-30 mb-8" data-icon="format_quote"></span>
+<blockquote class="serif text-3xl md:text-5xl leading-tight mb-12 italic">
+                Designing a house that you can call home.
+            </blockquote>
+<p class="font-body tracking-widest uppercase text-sm mb-16"></p>
+<a href="contact.html" class="bg-white text-[#5B634A] px-12 py-5 rounded-lg font-bold tracking-widest hover:bg-surface-container-low transition-all text-sm shadow-xl inline-block text-center">
+    START YOUR PROJECT
+</a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#f5f3ee] dark:bg-[#121211] w-full py-20">
+<div class="flex flex-col items-center gap-8 px-8 w-full max-w-7xl mx-auto">
+<div class="space-y-6 text-center">
+<span class="font-['Noto_Serif'] text-xl text-[#1b1c19] dark:text-[#fbf9f4]">Expressive Design</span>
+<p class="text-[#474948] dark:text-[#c7c7bc] font-['Manrope'] text-sm tracking-widest uppercase leading-relaxed max-w-2xl">
+                    Boutique interior design crafting intentional, soulful environments in the Great Lakes region.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-['Manrope'] text-sm tracking-widest uppercase">
+<a class="font-bold text-[#1b1c19] dark:text-[#fbf9f4] hover:underline decoration-[#645e52] underline-offset-8 opacity-80 hover:opacity-100 transition-opacity" href="index.html">Home</a>
+<a class="text-[#645e52] dark:text-[#c7c7bc] hover:underline decoration-[#645e52] underline-offset-8 opacity-80 hover:opacity-100 transition-opacity" href="about.html">About Us</a>
+<a class="text-[#645e52] dark:text-[#c7c7bc] hover:underline decoration-[#645e52] underline-offset-8 opacity-80 hover:opacity-100 transition-opacity" href="contact.html">Contact Us</a>
+<a class="text-[#645e52] dark:text-[#c7c7bc] hover:underline decoration-[#645e52] underline-offset-8 opacity-80 hover:opacity-100 transition-opacity" href="testimonials.html">Testimonials</a>
+</div>
+<div class="flex flex-col items-center gap-6">
+<div class="flex gap-6">
+    <a href="https://www.instagram.com/expressive_design/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:text-tertiary transition-colors">
+        Instagram
+    </a>
+    <a href="https://www.facebook.com/share/17T6kyfAfE/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="text-secondary hover:text-tertiary transition-colors">
+        Facebook
+    </a>
+</div>
+<div class="pt-8 text-center">
+<p class="text-xs text-[#474948] dark:text-[#c7c7bc]">© 2026 Expressive Design. ALL RIGHTS RESERVED.</p>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

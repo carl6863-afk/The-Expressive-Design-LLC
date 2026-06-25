@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f5f3ee",
+                    "on-surface": "#1b1c19",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "surface-bright": "#fbf9f4",
+                    "inverse-on-surface": "#f2f1ec",
+                    "secondary-fixed": "#ebe1d2",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#f0eee9",
+                    "outline": "#76786e",
+                    "surface-container-highest": "#e4e2dd",
+                    "tertiary-fixed-dim": "#c2caac",
+                    "background": "#fbf9f4",
+                    "inverse-primary": "#c6c6c6",
+                    "on-primary-container": "#dbdbda",
+                    "tertiary-container": "#5b634a",
+                    "on-tertiary-fixed": "#171e0a",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#686256",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#cec5b7",
+                    "surface-container-high": "#eae8e3",
+                    "secondary": "#645e52",
+                    "primary": "#474948",
+                    "tertiary-fixed": "#dee6c7",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#5d5f5e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#4c463b",
+                    "on-tertiary-fixed-variant": "#424a32",
+                    "on-primary-fixed-variant": "#454747",
+                    "inverse-surface": "#30312e",
+                    "on-surface-variant": "#46483f",
+                    "surface-dim": "#dbdad5",
+                    "tertiary": "#434b34",
+                    "on-tertiary-container": "#d6dfbf",
+                    "surface": "#fbf9f4",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#5f6060",
+                    "surface-variant": "#e4e2dd",
+                    "primary-fixed": "#e2e2e2",
+                    "on-secondary-fixed": "#1f1b12",
+                    "on-primary-fixed": "#1a1c1c",
+                    "on-background": "#1b1c19",
+                    "outline-variant": "#c7c7bc",
+                    "secondary-container": "#e8dfcf"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .notoSerif { font-family: 'Noto Serif', serif; }
+        .manrope { font-family: 'Manrope', sans-serif; }
+        .backdrop-blur-20px { backdrop-filter: blur(20px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface manrope">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fbf9f4]/80 dark:bg-[#1b1c19]/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(27,28,25,0.05)]">
+<nav class="flex justify-between items-center px-12 py-6 max-w-full">
+<div class="flex items-center gap-4">
+      
+<button id="menuBtn" class="md:hidden p-2" aria-label="Open navigation menu">
+  <span class="material-symbols-outlined text-[#474948] dark:text-[#fbf9f4]">menu</span>
+</button>
+      
+<div class="font-['Noto_Serif'] text-2xl tracking-tighter font-bold text-[#1b1c19] dark:text-[#fbf9f4]">
+                Expressive Design
+            </div>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-[#645e52] dark:text-[#c7c7bc] hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300 font-['Noto_Serif'] text-lg tracking-tight" href="index.html">Home</a>
+<a class="text-[#645e52] dark:text-[#c7c7bc] hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300 font-['Noto_Serif'] text-lg tracking-tight" href="about.html">About Us</a>
+<a class="text-[#645e52] dark:text-[#c7c7bc] hover:text-[#1b1c19] dark:hover:text-[#ffffff] transition-colors duration-300 font-['Noto_Serif'] text-lg tracking-tight" href="contact.html">Contact Us</a>
+<a class="text-[#474948] dark:text-[#fbf9f4] border-b border-[#645e52] pb-1 font-['Noto_Serif'] text-lg tracking-tight" href="testimonials.html">Testimonials</a>
+</div>
+<a href="contact.html" class="bg-[#474948] dark:bg-[#fbf9f4] text-white dark:text-[#1b1c19] px-8 py-3 rounded-DEFAULT transition-transform duration-200 scale-100 active:scale-95 font-label tracking-wide uppercase text-xs inline-block">
+    Contact
+</a>
+      <div id="mobileMenu" class="hidden fixed top-[88px] left-0 w-full bg-[#fbf9f4] z-[9999] flex flex-col items-center gap-3 py-6 font-['Noto_Serif'] text-xl shadow-lg">
+
+  <button id="closeBtn" class="self-start ml-6 text-3xl text-[#474948]">
+    ✕
+  </button>
+
+  <a href="index.html" class="text-[#1b1c19]">Home</a>
+  <a href="about.html" class="text-[#1b1c19]">About Us</a>
+  <a href="contact.html" class="text-[#1b1c19]">Contact Us</a>
+ 
+
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-24 px-8 md:px-16">
+<!-- Hero Section -->
+<section class="max-w-screen-xl mx-auto mb-20 text-center">
+<h1 class="text-5xl md:text-7xl notoSerif font-normal tracking-tighter text-primary mb-6">Voices of Intentional Living</h1>
+<p class="manrope text-lg text-secondary max-w-2xl mx-auto leading-relaxed opacity-80">
+                Stories from the homes we've touched, the spaces we've reimagined, and the lives that breathe within them.
+            </p>
+</section>
+<!-- Editorial Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-y-32 items-start max-w-screen-xl mx-auto">
+<!-- Testimonial 1: Large Asymmetric -->
+<div class="md:col-span-7 space-y-8">
+<div class="relative group">
+<img alt="Elegant minimal living room" class="w-full aspect-[4/5] object-cover rounded-lg shadow-sm" data-alt="Modern minimalist living room with warm sunlight streaming through floor to ceiling windows onto a textured linen sofa and stone coffee table" src="tabletop.jpeg"/>
+</div>
+<div class="pt-8">
+<blockquote class="notoSerif text-3xl md:text-4xl leading-tight text-primary italic mb-6">
+                        A space designed with comfort and care, where every decision was made with love and every detail was done right.
+                    </blockquote>
+<cite class="notoSerif not-italic text-lg text-primary block border-l-2 border-secondary pl-4">
+                        <span class="text-secondary opacity-70"></span>
+</cite>
+</div>
+</div>
+<!-- Testimonial 2: Elevated Small -->
+<div class="md:col-span-5 md:mt-48 space-y-8 bg-surface-container-low p-10 rounded-lg">
+<div class="w-12 h-12 bg-tertiary-fixed-dim rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">format_quote</span>
+</div>
+<blockquote class="notoSerif text-xl md:text-xl leading-loose text-primary">
+  "On three separate occasions, I have had the good fortune of working with Ashley and I couldn't be more pleased with all of the results! She has an exceptional eye for design while always maintaining a high level of professionalism. She was very receptive to what I hoped for and understood my vision while offering creative ideas. In the end, she elevated my space beyond my imagination. All of the details, from the color scheme to the furniture choices, were thoughtfully selected to reflect my personal style. I highly recommend Ashley for any design needs and will not hesitate to call in her in the future. She is THE BEST!!!"
+</blockquote>
+
+<cite class="manrope font-semibold tracking-widest uppercase text-xs text-secondary opacity-70">
+  Pam C.
+</cite>
+<cite class="manrope font-semibold tracking-widest uppercase text-xs text-secondary opacity-70">
+                     Pam C.<span class="font-normal"></span>
+</cite>
+</div>
+<!-- Testimonial 3: Full Width Quote Break -->
+<div class="md:col-span-12 py-24 bg-surface-container rounded-xl flex flex-col items-center justify-center text-center px-10">
+<div class="max-w-3xl">
+<h2 class="manrope uppercase tracking-[0.3em] text-[10px] text-tertiary mb-12 font-bold"></h2>
+<blockquote class="notoSerif text-2xl md:text-3xl text-primary leading-tight mb-10">
+  "Working with Ashley is everything you could hope for when making big decisions that transform your space. Ashley is extremely kind, perceptive, and patient. She listened to our ideas, provided options, and helped us make our dream come true. We had an amazing experience redecorating our home."
+</blockquote>
+
+<div class="flex items-center justify-center gap-4">
+  <div class="h-px w-8 bg-outline-variant"></div>
+  <cite class="notoSerif italic text-xl text-secondary">Nancy B</cite>
+  <div class="h-px w-8 bg-outline-variant"></div>
+</div>
+</div>
+</div>
+<!-- Testimonial 4: Reverse Asymmetric -->
+<div class="md:col-span-5 space-y-8">
+<div class="bg-surface-container-low p-12 rounded-lg">
+<blockquote class="notoSerif text-2xl leading-relaxed text-primary mb-8">
+                        "I have really enjoyed working with Ashley and getting to know her!  She is very professional and is accommodating with your schedule and is always on time. She has great taste and ideas for color and decorating!  She is willing to do any job large or small. I would recommend Expressive Design!"
+                    </blockquote>
+<cite class="manrope text-sm text-primary tracking-wide">
+<span class="font-bold"></span><br/>
+<span class="text-secondary italic"></span>
+</cite>
+</div>
+</div>
+<div class="md:col-span-7 md:-mt-20">
+<img alt="Artistic kitchen detail" class="w-full aspect-[16/9] object-cover rounded-lg" data-alt="Detailed close up of a bespoke dark wood kitchen island with marble top and subtle morning light reflecting off artisanal ceramics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCzmq4qeDNkIPULzqOQvoTJzrAO5CnCeKbrTw4sK8cS3m5Y9CVVpO_tpSE5CoCh8IONyDy9elm89H-69r3w3WaDilNlfzVUzB_68wu8YLhxxY32zwxFjOAGedcXJu__K4XflHIGUw1BVyxkDlNy4KhG5-5HBjyC9XPvFaIh84o9tQj5DpTb8NLdEfZ-uh90SG-I5Evuh5g5Fk7lPZjid-RQGBsc8EMHrNUSN_sRHiP5t2bD-EUMHOirRb4F5sDVu0cZv7CvA9fTjs"/>
+<div class="mt-8 flex justify-end">
+<div class="max-w-md text-right">
+<p class="manrope text-sm text-secondary leading-relaxed italic">
+                            "Nancy S. -
+
+I’ve used Ashley a couple times each time she was up front about her charges and costs so no guessing or surprises. She is always prompt and kept me informed all along the way with tradesmen schedules and orders. 
+
+I was most impressed when she told me not to agree to  anything if I didn’t love love love it. Best guidance for a perfect outcome!
+
+Ashley paid attention to what I had and best of all listened to me while still opened my mind to new and current styles. 
+
+
+
+She paid close attention to my budget, while still offering high quality items . Ashley truly cares that you are happy with your project. She’s a incredibly creative professional! She’s my first and last choice for interior design."
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 bg-[#f5f3ee] dark:bg-stone-950 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center px-8 md:px-16 gap-8">
+<div class="font-serif italic text-lg text-[#474948] dark:text-stone-100 notoSerif">
+                Expressive Design
+            </div>
+<div class="flex flex-wrap gap-8">
+<a class="manrope text-xs tracking-widest uppercase text-[#474948]/50 hover:text-[#474948] transition-opacity" href="index.html">Home</a>
+<a class="manrope text-xs tracking-widest uppercase text-[#474948]/50 hover:text-[#474948] transition-opacity" href="about.html">About Us</a>
+<a class="manrope text-xs tracking-widest uppercase text-[#474948]/50 hover:text-[#474948] transition-opacity" href="contact.html">Contact Us</a>
+<a class="manrope text-xs tracking-widest uppercase text-[#5B634A] underline underline-offset-8" href="testimonials.html">Testimonials</a>
+</div>
+<div class="manrope text-xs tracking-widest uppercase text-[#474948]/50">
+                © 2026 Expressive Design. Designed with Intentional Asymmetry.
+            </div>
+</div>
+</footer>
+      <script>
+const menuBtn = document.getElementById("menuBtn");
+const closeBtn = document.getElementById("closeBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+
+closeBtn.addEventListener("click", () => {
+  mobileMenu.classList.add("hidden");
+});
+</script>
+</body></html>
